@@ -53,7 +53,9 @@ h1 {
   color: #dc3545;
 }
 
-.controls .fa-pause {
+.controls .fa-pause,
+.controls .fa-backward,
+.controls .fa-fast-forward {
   color: #fff;
 }
 

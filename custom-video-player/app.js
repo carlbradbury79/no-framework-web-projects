@@ -1,6 +1,8 @@
 const video = document.getElementById('video');
 const play = document.getElementById('play');
 const stop = document.getElementById('stop');
+const fastForward = document.getElementById('fastForward');
+const backward = document.getElementById('backward');
 const timestamp = document.getElementById('timestamp');
 const progress = document.getElementById('progress');
 
@@ -45,6 +47,12 @@ function stopVideo() {
   video.currentTime = 0;
   video.pause();
 }
+function goForward() {
+  video.currentTime += 5;
+}
+function goBack() {
+  video.currentTime -= 5;
+}
 
 // Event Listeners
 video.addEventListener('click', toggleVideoStatus);
@@ -53,6 +61,10 @@ video.addEventListener('play', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
 
 play.addEventListener('click', toggleVideoStatus);
+
+fastForward.addEventListener('click', goForward);
+
+backward.addEventListener('click', goBack);
 
 stop.addEventListener('click', stopVideo);
 
